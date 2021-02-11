@@ -1,4 +1,4 @@
 
 helm-all:
-	helm package drillg
+	helm package drill
 	helm repo index .
