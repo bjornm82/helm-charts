@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  drill:
+  - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2021-02-11T07:00:32.064231+01:00"
+    description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
+    digest: a62b433f8675eaf28f2b150fcc25c57b6d8bfb0dead7b21c0e0b6ef226786c82
+    home: http://drill.apache.org/
+    icon: https://raw.githubusercontent.com/apache/drill/master/src/main/resources/logos/ApacheDrill.png
+    keywords:
+    - drill
+    maintainers:
+    - email: agirish@apache.org
+      name: Abhishek Girish
+    name: drill
+    sources:
+    - https://github.com/bjornm82/helm-charts
+    - https://github.com/Agirish/drill-helm-charts
+    type: application
+    urls:
+    - https://bjornm82.github.io/helm-charts/drill-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-02-11T07:00:32.063215+01:00"
