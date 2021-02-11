@@ -20,7 +20,7 @@ drill:
   # Total CPU for each Drill pod
   cpu: 4000m
   # Drill image with tag
-  image: agirish/drill:1.17.0
+  image: bjornmooijekind/drill:1.18.0
   # Drill's HTTP port
   httpPort: 8047
   # User Server port. The Bit Server Port and Data Server ports are +1 and +2
@@ -104,4 +104,4 @@ zookeeper:
   # Total CPU for each ZooKeeper pod
   cpu: 500m
   # ZooKeeper image with tag
-  image: agirish/zookeeper:3.6.0
+  image: bjornmooijekind/zookeeper:3.5.7
