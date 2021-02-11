@@ -104,4 +104,4 @@ zookeeper:
   # Total CPU for each ZooKeeper pod
   cpu: 500m
   # ZooKeeper image with tag
-  image: bjornmooijekind/zookeeper:3.5.7
+  image: bjornmooijekind/zookeeper:3.6.0
