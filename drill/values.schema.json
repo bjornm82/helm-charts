@@ -6,7 +6,7 @@
       "type": "object",
       "properties": {
         "count": {
-          "type": "int",
+          "type": "integer",
           "form": true,
           "render": "slider",
           "title": "Amount of nodes",
