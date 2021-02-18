@@ -3,9 +3,9 @@ entries:
   drill:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2021-02-17T15:44:23.119192+01:00"
+    created: "2021-02-17T21:56:17.015554+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
-    digest: ec112aa34d617accda45ebda3e95a6133a330f5fb872a8fa459e577b37ae1f25
+    digest: 21a77bc3b78ab3709b93ca5b58cc9ac1a370664f5dad735a76a2082ea9908df3
     home: https://github.com/bjornm82/helm-charts
     icon: https://raw.githubusercontent.com/apache/drill/master/src/main/resources/logos/ApacheDrill.png
     keywords:
@@ -23,7 +23,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-17T15:44:23.118527+01:00"
+    created: "2021-02-17T21:56:17.014115+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -43,7 +43,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-17T15:44:23.117847+01:00"
+    created: "2021-02-17T21:56:17.013005+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -61,4 +61,28 @@ entries:
     urls:
     - drill-0.0.1.tgz
     version: 0.0.1
-generated: "2021-02-17T15:44:23.116877+01:00"
+  superset:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-02-17T21:56:17.027863+01:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.0
+    description: Apache Superset is a modern, enterprise-ready business intelligence
+      web application
+    digest: ec46250b702797bc149600ab133c339ed136518f1e1b8ef34ce935519150463c
+    maintainers:
+    - email: cychiang0823@gmail.com
+      name: Chuan-Yen Chiang
+      url: https://github.com/cychiang
+    name: superset
+    urls:
+    - superset-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-02-17T21:56:17.011914+01:00"
