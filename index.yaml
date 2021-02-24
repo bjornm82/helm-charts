@@ -3,7 +3,7 @@ entries:
   drill:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2021-02-17T21:56:17.015554+01:00"
+    created: "2021-02-24T12:38:44.338597+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: 21a77bc3b78ab3709b93ca5b58cc9ac1a370664f5dad735a76a2082ea9908df3
     home: https://github.com/bjornm82/helm-charts
@@ -23,7 +23,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-17T21:56:17.014115+01:00"
+    created: "2021-02-24T12:38:44.336875+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -43,7 +43,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-17T21:56:17.013005+01:00"
+    created: "2021-02-24T12:38:44.335287+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -61,10 +61,45 @@ entries:
     urls:
     - drill-0.0.1.tgz
     version: 0.0.1
+  nifi:
+  - apiVersion: v2
+    appVersion: 1.12.1
+    created: "2021-02-24T12:38:44.345565+01:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.23.0
+    - alias: registry
+      condition: registry.enabled
+      name: nifi-registry
+      repository: https://dysnix.github.io/charts/
+      version: 0.1.1
+    - condition: ca.enabled
+      name: ca
+      repository: ""
+      version: 1.0.1
+    description: Apache NiFi is a software project from the Apache Software Foundation
+      designed to automate the flow of data between software systems.
+    digest: 5d967de2895f77d2b954f70da4297fb068c17dc82a5df623e8304adfe6d15f74
+    home: https://nifi.apache.org/
+    icon: https://svn.apache.org/repos/asf/nifi/site/trunk/images/niFi-logo-horizontal-scaled.png
+    keywords:
+    - nifi
+    - data
+    - process
+    maintainers:
+    - email: alexandre.nuttinck@cetic.be
+      name: alexnuttinck
+      url: https://github.com/alexnuttinck
+    name: nifi
+    urls:
+    - nifi-0.6.2.tgz
+    version: 0.6.2
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-17T21:56:17.027863+01:00"
+    created: "2021-02-24T12:38:44.354192+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -85,4 +120,4 @@ entries:
     urls:
     - superset-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-17T21:56:17.011914+01:00"
+generated: "2021-02-24T12:38:44.332831+01:00"
