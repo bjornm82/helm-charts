@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   atlas:
   - apiVersion: v1
-    created: "2021-02-25T13:27:49.842233+01:00"
+    created: "2021-02-25T13:36:31.501089+01:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -20,7 +20,7 @@ entries:
     - atlas-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v1
-    created: "2021-02-25T13:27:49.868893+01:00"
+    created: "2021-02-25T13:36:31.537617+01:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -40,7 +40,7 @@ entries:
   drill:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2021-02-25T13:27:49.846115+01:00"
+    created: "2021-02-25T13:36:31.511029+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: 6368c9dca7c94759162de1476356934d01f524fb1ad19690da2eb2d1018d460f
     home: https://github.com/bjornm82/helm-charts
@@ -60,7 +60,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-25T13:27:49.844913+01:00"
+    created: "2021-02-25T13:36:31.508477+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -80,7 +80,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-25T13:27:49.843358+01:00"
+    created: "2021-02-25T13:36:31.503099+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -101,7 +101,7 @@ entries:
   nifi:
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2021-02-25T13:27:49.854625+01:00"
+    created: "2021-02-25T13:36:31.520179+01:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -136,7 +136,7 @@ entries:
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-25T13:27:49.863085+01:00"
+    created: "2021-02-25T13:36:31.529256+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -157,4 +157,26 @@ entries:
     urls:
     - superset-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-25T13:27:49.835946+01:00"
+  zookeeper:
+  - apiVersion: v1
+    appVersion: 3.5.5
+    created: "2021-02-25T13:36:31.530841+01:00"
+    description: Centralized service for maintaining configuration information, naming,
+      providing distributed synchronization, and providing group services.
+    digest: 26d5e1dbf3b641cab45b655bb644b18a762843723b3251028f3210085b4b64d1
+    home: https://zookeeper.apache.org/
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: owensk@google.com
+      name: kow3ns
+    name: zookeeper
+    sources:
+    - https://github.com/apache/zookeeper
+    - https://github.com/kubernetes/contrib/tree/master/statefulsets/zookeeper
+    urls:
+    - zookeeper-2.1.3.tgz
+    version: 2.1.3
+generated: "2021-02-25T13:36:31.48946+01:00"
