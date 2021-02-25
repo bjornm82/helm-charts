@@ -1,9 +1,28 @@
 apiVersion: v1
 entries:
+  atlas:
+  - apiVersion: v1
+    created: "2021-02-25T09:28:30.045737+01:00"
+    dependencies:
+    - name: zookeeper
+      repository: file://charts/zookeeper
+      version: 1.2.3
+    - name: cassandra
+      repository: file://charts/cassandra
+      version: 1.2.3
+    - name: solr
+      repository: file://charts/solr
+      version: 1.2.3
+    description: A Helm chart for Kubernetes
+    digest: 24bbd9a73cfa56e4520f67eb7dc864097f121d5df1c7fd68da1e82f1b233cd5c
+    name: atlas
+    urls:
+    - atlas-0.1.0.tgz
+    version: 0.1.0
   drill:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2021-02-24T12:38:44.338597+01:00"
+    created: "2021-02-25T09:28:30.051401+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: 21a77bc3b78ab3709b93ca5b58cc9ac1a370664f5dad735a76a2082ea9908df3
     home: https://github.com/bjornm82/helm-charts
@@ -23,7 +42,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-24T12:38:44.336875+01:00"
+    created: "2021-02-25T09:28:30.04924+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -43,7 +62,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-24T12:38:44.335287+01:00"
+    created: "2021-02-25T09:28:30.047458+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -64,7 +83,7 @@ entries:
   nifi:
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2021-02-24T12:38:44.345565+01:00"
+    created: "2021-02-25T09:28:30.060772+01:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -99,7 +118,7 @@ entries:
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-24T12:38:44.354192+01:00"
+    created: "2021-02-25T09:28:30.071772+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -120,4 +139,4 @@ entries:
     urls:
     - superset-0.1.0.tgz
     version: 0.1.0
-generated: "2021-02-24T12:38:44.332831+01:00"
+generated: "2021-02-25T09:28:30.041773+01:00"
