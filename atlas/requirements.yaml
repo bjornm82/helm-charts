@@ -5,6 +5,7 @@ dependencies:
 - name: solr
   version: "1.3.3"
   repository: "https://bjornm82.github.io/helm-charts/"
-- name: zookeeper
+- alias: zookeeper-atlas
+  name: zookeeper
   version: 2.1.3
   repository: "https://bjornm82.github.io/helm-charts/"

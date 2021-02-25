@@ -1,0 +1,12 @@
+dependencies:
+- name: cassandra
+  repository: https://bjornm82.github.io/helm-charts/
+  version: 0.13.3
+- name: solr
+  repository: https://bjornm82.github.io/helm-charts/
+  version: 1.3.3
+- name: zookeeper
+  repository: https://bjornm82.github.io/helm-charts/
+  version: 2.1.3
+digest: sha256:9ca546bd75869a3012a8d764d2ee703a377bb623888c097540ba50d730338b9b
+generated: "2021-02-25T14:13:59.225965+01:00"
