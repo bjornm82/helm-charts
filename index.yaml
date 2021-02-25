@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   atlas:
   - apiVersion: v1
-    created: "2021-02-25T13:36:31.501089+01:00"
+    created: "2021-02-25T13:43:14.11267+01:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -20,7 +20,7 @@ entries:
     - atlas-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v1
-    created: "2021-02-25T13:36:31.537617+01:00"
+    created: "2021-02-25T13:43:14.148174+01:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -37,10 +37,33 @@ entries:
     urls:
     - atlas/atlas-0.1.0.tgz
     version: 0.1.0
+  cassandra:
+  - apiVersion: v1
+    appVersion: 3.11.3
+    created: "2021-02-25T13:43:14.116903+01:00"
+    description: Apache Cassandra is a free and open-source distributed database management
+      system designed to handle large amounts of data across many commodity servers,
+      providing high availability with no single point of failure.
+    digest: 05310656c771b74360c160f0a5b8dfc8bd56cdc301cf4168c0c187af0bed42fd
+    home: http://cassandra.apache.org
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/330px-Cassandra_logo.svg.png
+    keywords:
+    - cassandra
+    - database
+    - nosql
+    maintainers:
+    - email: goonohc@gmail.com
+      name: KongZ
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    name: cassandra
+    urls:
+    - cassandra-0.13.3.tgz
+    version: 0.13.3
   drill:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2021-02-25T13:36:31.511029+01:00"
+    created: "2021-02-25T13:43:14.120913+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: 6368c9dca7c94759162de1476356934d01f524fb1ad19690da2eb2d1018d460f
     home: https://github.com/bjornm82/helm-charts
@@ -60,7 +83,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-25T13:36:31.508477+01:00"
+    created: "2021-02-25T13:43:14.119358+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -80,7 +103,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-02-25T13:36:31.503099+01:00"
+    created: "2021-02-25T13:43:14.118106+01:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -101,7 +124,7 @@ entries:
   nifi:
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2021-02-25T13:36:31.520179+01:00"
+    created: "2021-02-25T13:43:14.128591+01:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -133,10 +156,32 @@ entries:
     urls:
     - nifi-0.6.2.tgz
     version: 0.6.2
+  solr:
+  - apiVersion: v1
+    appVersion: 7.7.2
+    created: "2021-02-25T13:43:14.130911+01:00"
+    dependencies:
+    - name: zookeeper
+      repository: https://bjornm82.github.io/helm-charts/
+      version: 2.1.3
+    description: 'A helm chart to install Apache Solr: http://lucene.apache.org/solr/'
+    digest: c276c046c29eaf3a67adf57bb2ecf04997ea8c04fa998a32320a42e1995a5127
+    home: http://lucene.apache.org/solr/
+    keywords:
+    - solr
+    maintainers:
+    - email: ian.thebridge@lucidworks.com
+      name: ian-thebridge-lucidworks
+    name: solr
+    sources:
+    - https://gitbox.apache.org/repos/asf?p=lucene-solr.git
+    urls:
+    - solr-1.3.3.tgz
+    version: 1.3.3
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-02-25T13:36:31.529256+01:00"
+    created: "2021-02-25T13:43:14.140144+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -160,10 +205,10 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2021-02-25T13:36:31.530841+01:00"
+    created: "2021-02-25T13:43:14.142027+01:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
-    digest: 26d5e1dbf3b641cab45b655bb644b18a762843723b3251028f3210085b4b64d1
+    digest: 713ab01ac9aa75a4cbf166378591e6a9ceda4e6cc0436c929e0474b204716b0f
     home: https://zookeeper.apache.org/
     icon: https://zookeeper.apache.org/images/zookeeper_small.gif
     kubeVersion: ^1.10.0-0
@@ -179,4 +224,4 @@ entries:
     urls:
     - zookeeper-2.1.3.tgz
     version: 2.1.3
-generated: "2021-02-25T13:36:31.48946+01:00"
+generated: "2021-02-25T13:43:14.106138+01:00"
