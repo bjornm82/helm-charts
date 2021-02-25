@@ -33,7 +33,7 @@ If you do not specify a name, helm will select a name for you.
 ### Installed Components
 You can use `kubectl get` to view all of the installed components.
 
-```console{%raw}
+```
 $ kubectl get all -l app=zookeeper
 NAME:   zookeeper
 LAST DEPLOYED: Wed Apr 11 17:09:48 2018
