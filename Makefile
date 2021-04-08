@@ -5,4 +5,5 @@ helm-all:
 	helm package drill
 	helm package superset
 	helm package presidio
+	helm package cp-helm-charts
 	helm repo index .
