@@ -39,6 +39,12 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
+zookeeper:
+  ports:
+    client:
+      port: 2181
+
 kafka:
-  url: azure_event_hub_url
+  url: PLAINTEXT://10.100.114.4:9200
+  zk: tightfisted-ring-zookeeper.default.svc.cluster.local:2181
   connectionString: eventhubconnectionstring

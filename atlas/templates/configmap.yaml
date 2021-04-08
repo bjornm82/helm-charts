@@ -25,23 +25,15 @@ data:
 
     atlas.notification.embedded=false
     atlas.kafka.data=${sys:atlas.home}/data/kafka
-    atlas.kafka.zookeeper.connect=gruesome-shoe-zookeeper-headless.default.svc.cluster.local:2181
+    atlas.kafka.zookeeper.connect={{ .Values.kafka.zk }}
     atlas.kafka.bootstrap.servers={{ .Values.kafka.url  }}
-    # atlas.kafka.sasl.mechanism=PLAIN
-    atlas.kafka.security.protocol=PLAINTEXT
-    atlas.kafka.zookeeper.session.timeout.ms=400
-    atlas.kafka.zookeeper.connection.timeout.ms=200
+    atlas.kafka.zookeeper.session.timeout.ms=600
+    atlas.kafka.zookeeper.connection.timeout.ms=300
     atlas.kafka.zookeeper.sync.time.ms=20
     atlas.kafka.auto.commit.interval.ms=1000
+    atlas.kafka.auto.offset.reset=smallest
     atlas.kafka.hook.group.id=atlas
-
-    atlas.kafka.enable.auto.commit=false
-    atlas.kafka.auto.offset.reset=earliest
-    atlas.kafka.session.timeout.ms=30000
-    atlas.kafka.offsets.topic.replication.factor=1
-    atlas.kafka.poll.timeout.ms=1000
-    atlas.kafka.request.timeout.ms=60000
-
+    atlas.kafka.auto.commit.enable=false
     atlas.notification.create.topics=true
     atlas.notification.replicas=1
     atlas.notification.topics=ATLAS_HOOK,ATLAS_ENTITIES
@@ -87,5 +79,5 @@ data:
     atlas.jaas.KafkaClient.loginModuleControlFlag=required
     # atlas.jaas.KafkaClient.option.username=$ConnectionString
     # atlas.jaas.KafkaClient.option.password=Endpoint={{ .Values.kafka.connectionString  }}
-    atlas.jaas.KafkaClient.option.mechanism=PLAIN
+    atlas.jaas.KafkaClient.option.mechanism=GSSAPI
     atlas.jaas.KafkaClient.option.protocol=PLAINTEXT

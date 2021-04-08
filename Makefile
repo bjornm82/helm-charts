@@ -4,4 +4,5 @@ helm-all:
 	helm package atlas
 	helm package drill
 	helm package superset
+	helm package presidio
 	helm repo index .
