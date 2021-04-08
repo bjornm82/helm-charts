@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   atlas:
   - apiVersion: v1
-    created: "2021-04-08T13:19:59.9962+02:00"
+    created: "2021-04-08T13:33:00.635785+02:00"
     dependencies:
     - name: cassandra
       repository: https://bjornm82.github.io/helm-charts/
@@ -15,13 +15,13 @@ entries:
       repository: https://bjornm82.github.io/helm-charts/
       version: 2.1.3
     description: A Helm chart for Kubernetes
-    digest: ae315f551e301f08a9f11588fcbe7697cace56b3997c61d7313db363a6460a07
+    digest: db0a9023f9344d04be27b970bfb57d0bdf4fadd12304c6c82307cb96cd048b7a
     name: atlas
     urls:
     - atlas-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v1
-    created: "2021-04-08T13:20:00.041931+02:00"
+    created: "2021-04-08T13:33:00.683866+02:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -41,7 +41,7 @@ entries:
   cassandra:
   - apiVersion: v1
     appVersion: 3.11.3
-    created: "2021-04-08T13:19:59.997984+02:00"
+    created: "2021-04-08T13:33:00.639585+02:00"
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
@@ -64,38 +64,14 @@ entries:
   cp-helm-charts:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-08T13:20:00.005248+02:00"
+    created: "2021-04-08T13:33:00.644544+02:00"
     dependencies:
-    - condition: cp-kafka.enabled
-      name: cp-kafka
-      repository: file://./charts/cp-kafka
-      version: 0.1.0
-    - condition: cp-zookeeper.enabled
-      name: cp-zookeeper
-      repository: file://./charts/cp-zookeeper
-      version: 0.1.0
     - condition: cp-schema-registry.enabled
       name: cp-schema-registry
       repository: file://./charts/cp-schema-registry
       version: 0.1.0
-    - condition: cp-kafka-rest.enabled
-      name: cp-kafka-rest
-      repository: file://./charts/cp-kafka-rest
-      version: 0.1.0
-    - condition: cp-kafka-connect.enabled
-      name: cp-kafka-connect
-      repository: file://./charts/cp-kafka-connect
-      version: 0.1.0
-    - condition: cp-ksql-server.enabled
-      name: cp-ksql-server
-      repository: file://./charts/cp-ksql-server
-      version: 0.1.0
-    - condition: cp-control-center.enabled
-      name: cp-control-center
-      repository: file://./charts/cp-control-center
-      version: 0.1.0
     description: A Helm chart for Confluent Platform Community Edition
-    digest: 5d11ff875b9006bd9481a60762e95563a7a31b0e6d918b3e7d143d033966105f
+    digest: ae2f9b37f3e1821e097410d4a5df1e67c5e3bc309bf5eb670903fcc558a53ec1
     name: cp-helm-charts
     urls:
     - cp-helm-charts-0.6.0.tgz
@@ -103,9 +79,9 @@ entries:
   drill:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2021-04-08T13:20:00.008308+02:00"
+    created: "2021-04-08T13:33:00.649035+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
-    digest: e3fddb5bce50dfbf1353f75e6dc858a9fb8674a7af2e716da93c06b95f7e3b9a
+    digest: 045ad68054468231bda1d6f3e92f729c2e6571c64de96e04dd6ea9364f661225
     home: https://github.com/bjornm82/helm-charts
     icon: https://raw.githubusercontent.com/apache/drill/master/src/main/resources/logos/ApacheDrill.png
     keywords:
@@ -123,7 +99,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-04-08T13:20:00.007206+02:00"
+    created: "2021-04-08T13:33:00.647576+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -143,7 +119,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-04-08T13:20:00.006263+02:00"
+    created: "2021-04-08T13:33:00.646054+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -164,7 +140,7 @@ entries:
   nifi:
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2021-04-08T13:20:00.01853+02:00"
+    created: "2021-04-08T13:33:00.659211+02:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -181,7 +157,7 @@ entries:
       version: 1.0.1
     description: Apache NiFi is a software project from the Apache Software Foundation
       designed to automate the flow of data between software systems.
-    digest: 2968a5ce15177675d20d49b457d537cfc566a39b2ff98c82b36cdea73fe208cf
+    digest: 48541d94df0a27f12ad309c3c4791133f0fc6943969844e0da9a37a2eab085de
     home: https://nifi.apache.org/
     icon: https://svn.apache.org/repos/asf/nifi/site/trunk/images/niFi-logo-horizontal-scaled.png
     keywords:
@@ -199,10 +175,10 @@ entries:
   presidio:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-04-08T13:20:00.01955+02:00"
+    created: "2021-04-08T13:33:00.659949+02:00"
     description: A context aware, born to the cloud, customizable data loss prevention
       service
-    digest: 295647543f08c6e54eb171857a39d6a6b894ce599582fe752b0d08c9836cbb25
+    digest: e46a4272c5a68c3b6feccfd9046c815a18d607b6130dfa89b01fe1778159ba2c
     name: presidio
     urls:
     - presidio-2.tgz
@@ -210,7 +186,7 @@ entries:
   solr:
   - apiVersion: v1
     appVersion: 7.7.2
-    created: "2021-04-08T13:20:00.023223+02:00"
+    created: "2021-04-08T13:33:00.663322+02:00"
     dependencies:
     - name: zookeeper
       repository: https://bjornm82.github.io/helm-charts/
@@ -232,7 +208,7 @@ entries:
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-08T13:20:00.034301+02:00"
+    created: "2021-04-08T13:33:00.676058+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -244,7 +220,7 @@ entries:
       version: 12.3.0
     description: Apache Superset is a modern, enterprise-ready business intelligence
       web application
-    digest: 32dc279aade34cc86dba577df8da2dd75ff1b421191cca0b8ed60bda0f38849a
+    digest: 385ec2244bc48a1843c5a46b8093191618f9daa8de7221d2b2154983bb259f63
     maintainers:
     - email: cychiang0823@gmail.com
       name: Chuan-Yen Chiang
@@ -256,7 +232,7 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2021-04-08T13:20:00.036915+02:00"
+    created: "2021-04-08T13:33:00.67884+02:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
     digest: 713ab01ac9aa75a4cbf166378591e6a9ceda4e6cc0436c929e0474b204716b0f
@@ -275,4 +251,4 @@ entries:
     urls:
     - zookeeper-2.1.3.tgz
     version: 2.1.3
-generated: "2021-04-08T13:19:59.989098+02:00"
+generated: "2021-04-08T13:33:00.625486+02:00"
