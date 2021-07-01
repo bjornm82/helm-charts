@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   atlas:
   - apiVersion: v1
-    created: "2021-04-08T13:50:53.114891+02:00"
+    created: "2021-07-01T13:03:27.423922+02:00"
     dependencies:
     - name: cassandra
       repository: https://bjornm82.github.io/helm-charts/
@@ -15,13 +15,13 @@ entries:
       repository: https://bjornm82.github.io/helm-charts/
       version: 2.1.3
     description: A Helm chart for Kubernetes
-    digest: 51ae02d9f695afdec87ca1c3fe5287e018475091b96e9940a559025615681e7d
+    digest: e7f0072414309476a792e4e17e9a0d1a365007f1b55180010e8c0573cea85b07
     name: atlas
     urls:
     - atlas-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v1
-    created: "2021-04-08T13:50:53.150535+02:00"
+    created: "2021-07-01T13:03:27.457336+02:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -41,7 +41,7 @@ entries:
   cassandra:
   - apiVersion: v1
     appVersion: 3.11.3
-    created: "2021-04-08T13:50:53.116801+02:00"
+    created: "2021-07-01T13:03:27.425677+02:00"
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
@@ -64,24 +64,24 @@ entries:
   cp-helm-charts:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-08T13:50:53.118247+02:00"
+    created: "2021-07-01T13:03:27.42796+02:00"
     dependencies:
     - condition: cp-schema-registry.enabled
       name: cp-schema-registry
       repository: file://./charts/cp-schema-registry
       version: 0.1.0
     description: A Helm chart for Confluent Platform Community Edition
-    digest: ccfd0ed9f4d7c55f2a65ff306d163cbed158f2c6bdf0aa5e9e8cd7624cdacfb5
+    digest: 0a2b9884f49cb18ab15ce4f928d2ee27335eb11ed2e49dc47673dcbc19872d00
     name: cp-helm-charts
     urls:
     - cp-helm-charts-0.6.0.tgz
     version: 0.6.0
   drill:
   - apiVersion: v2
-    appVersion: 1.18.1
-    created: "2021-04-08T13:50:53.122015+02:00"
+    appVersion: 1.19.0
+    created: "2021-07-01T13:03:27.43185+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
-    digest: 48b2ec56b717fa5166b8b5c4284180e2f1a618aee72f12137f515925ee293bdd
+    digest: cc5d6de78eb1f6f9fa49c37dd0af3e91fa13c99daebb522734bb57a1ceac1ad5
     home: https://github.com/bjornm82/helm-charts
     icon: https://raw.githubusercontent.com/apache/drill/master/src/main/resources/logos/ApacheDrill.png
     keywords:
@@ -99,7 +99,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-04-08T13:50:53.121203+02:00"
+    created: "2021-07-01T13:03:27.43108+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -119,7 +119,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-04-08T13:50:53.119748+02:00"
+    created: "2021-07-01T13:03:27.42955+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -140,7 +140,7 @@ entries:
   nifi:
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2021-04-08T13:50:53.129985+02:00"
+    created: "2021-07-01T13:03:27.439109+02:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -157,7 +157,7 @@ entries:
       version: 1.0.1
     description: Apache NiFi is a software project from the Apache Software Foundation
       designed to automate the flow of data between software systems.
-    digest: 0f1bf50c7912b9a8edbbd6561f8dea5dd5051006549338d34ff2fd97310ac72b
+    digest: adea25a7011154fbe4990340d4ff82e2537116719753470eddb9d10650a3f5b4
     home: https://nifi.apache.org/
     icon: https://svn.apache.org/repos/asf/nifi/site/trunk/images/niFi-logo-horizontal-scaled.png
     keywords:
@@ -175,10 +175,10 @@ entries:
   presidio:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-04-08T13:50:53.130784+02:00"
+    created: "2021-07-01T13:03:27.439611+02:00"
     description: A context aware, born to the cloud, customizable data loss prevention
       service
-    digest: 27200545cade886a928b1f30cbba246ba18447d2db0c747b1a5ef22a8d5722f8
+    digest: aaad1cf9c6eaec13b8d2c9fd28f6e0d1be6e44db9ac49c8fc539a0dd0f2a5428
     name: presidio
     urls:
     - presidio-2.tgz
@@ -186,7 +186,7 @@ entries:
   solr:
   - apiVersion: v1
     appVersion: 7.7.2
-    created: "2021-04-08T13:50:53.133348+02:00"
+    created: "2021-07-01T13:03:27.442447+02:00"
     dependencies:
     - name: zookeeper
       repository: https://bjornm82.github.io/helm-charts/
@@ -208,7 +208,7 @@ entries:
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-08T13:50:53.143093+02:00"
+    created: "2021-07-01T13:03:27.450146+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -220,7 +220,7 @@ entries:
       version: 12.3.0
     description: Apache Superset is a modern, enterprise-ready business intelligence
       web application
-    digest: 75647cf76b35ca13880fffa47f0d52be0360072f420738caa125c7b430737d12
+    digest: c4966836682257f380986f34ff29379f84dddad8cdbf151279bf128390ad6e89
     maintainers:
     - email: cychiang0823@gmail.com
       name: Chuan-Yen Chiang
@@ -232,7 +232,7 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2021-04-08T13:50:53.145122+02:00"
+    created: "2021-07-01T13:03:27.452984+02:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
     digest: 713ab01ac9aa75a4cbf166378591e6a9ceda4e6cc0436c929e0474b204716b0f
@@ -251,4 +251,4 @@ entries:
     urls:
     - zookeeper-2.1.3.tgz
     version: 2.1.3
-generated: "2021-04-08T13:50:53.106377+02:00"
+generated: "2021-07-01T13:03:27.418386+02:00"
