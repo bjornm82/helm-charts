@@ -17,7 +17,7 @@
 
 image:
   repository: apache/druid
-  tag: 0.19.0
+  tag: 0.21.1
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -34,7 +34,7 @@ configVars:
   DRUID_USE_CONTAINER_IP: "true"
 
   ## Druid Common Configurations. ref: https://druid.apache.org/docs/latest/configuration/index.html#common-configurations
-  druid_extensions_loadList: '["druid-histogram", "druid-datasketches", "druid-lookups-cached-global", "postgresql-metadata-storage"]'
+  druid_extensions_loadList: '["druid-kafka-indexing-service", "druid-avro-extensions", "druid-histogram", "druid-datasketches", "druid-lookups-cached-global", "postgresql-metadata-storage"]'
   druid_metadata_storage_type: postgresql
   druid_metadata_storage_connector_connectURI: jdbc:postgresql://postgres:5432/druid
   druid_metadata_storage_connector_user: druid

@@ -16,7 +16,7 @@
 {{- if .Values.coordinator.ingress.enabled -}}
 {{- $fullName := include "druid.coordinator.fullname" . -}}
 {{- $ingressPath := .Values.coordinator.ingress.path -}}
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}

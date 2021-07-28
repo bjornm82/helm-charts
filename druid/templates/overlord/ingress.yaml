@@ -16,7 +16,7 @@
 {{- if .Values.overlord.ingress.enabled -}}
 {{- $fullName := include "druid.overlord.fullname" . -}}
 {{- $ingressPath := .Values.overlord.ingress.path -}}
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
