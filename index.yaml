@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   atlas:
   - apiVersion: v1
-    created: "2021-07-01T13:03:27.423922+02:00"
+    created: "2021-07-28T16:10:38.006911+02:00"
     dependencies:
     - name: cassandra
       repository: https://bjornm82.github.io/helm-charts/
@@ -15,13 +15,13 @@ entries:
       repository: https://bjornm82.github.io/helm-charts/
       version: 2.1.3
     description: A Helm chart for Kubernetes
-    digest: e7f0072414309476a792e4e17e9a0d1a365007f1b55180010e8c0573cea85b07
+    digest: 15c8295709e66d7500d3cdfa3178a85de50f3e94b4a69faaa8359a7afe519fe4
     name: atlas
     urls:
     - atlas-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v1
-    created: "2021-07-01T13:03:27.457336+02:00"
+    created: "2021-07-28T16:10:38.051993+02:00"
     dependencies:
     - name: zookeeper
       repository: file://charts/zookeeper
@@ -41,7 +41,7 @@ entries:
   cassandra:
   - apiVersion: v1
     appVersion: 3.11.3
-    created: "2021-07-01T13:03:27.425677+02:00"
+    created: "2021-07-28T16:10:38.0089+02:00"
     description: Apache Cassandra is a free and open-source distributed database management
       system designed to handle large amounts of data across many commodity servers,
       providing high availability with no single point of failure.
@@ -64,24 +64,35 @@ entries:
   cp-helm-charts:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-07-01T13:03:27.42796+02:00"
+    created: "2021-07-28T16:10:38.011761+02:00"
     dependencies:
     - condition: cp-schema-registry.enabled
       name: cp-schema-registry
       repository: file://./charts/cp-schema-registry
       version: 0.1.0
     description: A Helm chart for Confluent Platform Community Edition
-    digest: 0a2b9884f49cb18ab15ce4f928d2ee27335eb11ed2e49dc47673dcbc19872d00
+    digest: b7f843ecd59656844de4d76ef2b65fceebe364fd633cd8bb7d64cbeb72a3cd61
     name: cp-helm-charts
     urls:
     - cp-helm-charts-0.6.0.tgz
     version: 0.6.0
+  divolte:
+  - apiVersion: v2
+    appVersion: 0.9.0
+    created: "2021-07-28T16:10:38.012298+02:00"
+    description: A Divolte Helm chart for Kubernetes
+    digest: b56c8634e39231542ce1599c37036d5308a91b6e1907b75da8bd2fed298550c2
+    name: divolte
+    type: application
+    urls:
+    - divolte-0.1.0.tgz
+    version: 0.1.0
   drill:
   - apiVersion: v2
     appVersion: 1.19.0
-    created: "2021-07-01T13:03:27.43185+02:00"
+    created: "2021-07-28T16:10:38.017495+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
-    digest: cc5d6de78eb1f6f9fa49c37dd0af3e91fa13c99daebb522734bb57a1ceac1ad5
+    digest: 8dfc5cf6f549f81c261e10751a0e0933d7298e231ccb2248255e029ca3c046a5
     home: https://github.com/bjornm82/helm-charts
     icon: https://raw.githubusercontent.com/apache/drill/master/src/main/resources/logos/ApacheDrill.png
     keywords:
@@ -99,7 +110,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-07-01T13:03:27.43108+02:00"
+    created: "2021-07-28T16:10:38.016617+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: c858bb36f9cb2db3a2c06004be1462b455991a5c1655b344bfaeffa19b43bd1d
     home: https://github.com/bjornm82/helm-charts
@@ -119,7 +130,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.18.0
-    created: "2021-07-01T13:03:27.42955+02:00"
+    created: "2021-07-28T16:10:38.014171+02:00"
     description: Helm Charts for deploying Apache Drill Clusters on Kubernetes
     digest: baa003654d7f61536c22afc697ba5485f7232e42295d58f1c2708a1f3f7574f1
     home: http://drill.apache.org/
@@ -137,10 +148,43 @@ entries:
     urls:
     - drill-0.0.1.tgz
     version: 0.0.1
+  druid:
+  - apiVersion: v2
+    appVersion: 0.19.0
+    created: "2021-07-28T16:10:38.023557+02:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.helm.sh/incubator
+      version: 2.1.4
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.helm.sh/stable
+      version: 1.6.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.6.4
+    deprecated: true
+    description: DEPRECATED Apache Druid is a high performance real-time analytics
+      database.
+    digest: 74308a15568fb2df91874c2a8abbf79728ec2571339237a9c7202af397d52d57
+    home: https://druid.apache.org/
+    icon: https://druid.apache.org/img/favicon.png
+    keywords:
+    - olap
+    - database
+    - analytics
+    name: druid
+    sources:
+    - https://github.com/apache/druid
+    urls:
+    - druid-0.3.0.tgz
+    version: 0.3.0
   nifi:
   - apiVersion: v2
     appVersion: 1.12.1
-    created: "2021-07-01T13:03:27.439109+02:00"
+    created: "2021-07-28T16:10:38.031417+02:00"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -157,7 +201,7 @@ entries:
       version: 1.0.1
     description: Apache NiFi is a software project from the Apache Software Foundation
       designed to automate the flow of data between software systems.
-    digest: adea25a7011154fbe4990340d4ff82e2537116719753470eddb9d10650a3f5b4
+    digest: 2408bb1be8fb42dedfc518f4df90611ce18410f56c90fce016c179586e61d114
     home: https://nifi.apache.org/
     icon: https://svn.apache.org/repos/asf/nifi/site/trunk/images/niFi-logo-horizontal-scaled.png
     keywords:
@@ -175,10 +219,10 @@ entries:
   presidio:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-07-01T13:03:27.439611+02:00"
+    created: "2021-07-28T16:10:38.032013+02:00"
     description: A context aware, born to the cloud, customizable data loss prevention
       service
-    digest: aaad1cf9c6eaec13b8d2c9fd28f6e0d1be6e44db9ac49c8fc539a0dd0f2a5428
+    digest: 80ea36aae394c144a05befe914a142657ba31ffc287ed9c6dfee1d3d8fd4fe78
     name: presidio
     urls:
     - presidio-2.tgz
@@ -186,7 +230,7 @@ entries:
   solr:
   - apiVersion: v1
     appVersion: 7.7.2
-    created: "2021-07-01T13:03:27.442447+02:00"
+    created: "2021-07-28T16:10:38.035734+02:00"
     dependencies:
     - name: zookeeper
       repository: https://bjornm82.github.io/helm-charts/
@@ -208,7 +252,7 @@ entries:
   superset:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-07-01T13:03:27.450146+02:00"
+    created: "2021-07-28T16:10:38.04476+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -220,7 +264,7 @@ entries:
       version: 12.3.0
     description: Apache Superset is a modern, enterprise-ready business intelligence
       web application
-    digest: c4966836682257f380986f34ff29379f84dddad8cdbf151279bf128390ad6e89
+    digest: 8ba56ec5b80c6b7286de8ddd93c68f064ecce9265a33ddb3ff1d6a9c3d83c346
     maintainers:
     - email: cychiang0823@gmail.com
       name: Chuan-Yen Chiang
@@ -232,7 +276,7 @@ entries:
   zookeeper:
   - apiVersion: v1
     appVersion: 3.5.5
-    created: "2021-07-01T13:03:27.452984+02:00"
+    created: "2021-07-28T16:10:38.047341+02:00"
     description: Centralized service for maintaining configuration information, naming,
       providing distributed synchronization, and providing group services.
     digest: 713ab01ac9aa75a4cbf166378591e6a9ceda4e6cc0436c929e0474b204716b0f
@@ -251,4 +295,4 @@ entries:
     urls:
     - zookeeper-2.1.3.tgz
     version: 2.1.3
-generated: "2021-07-01T13:03:27.418386+02:00"
+generated: "2021-07-28T16:10:38.000373+02:00"
